@@ -27,6 +27,14 @@
   --popFont: 'Poppins', sans-serif;
 }
 
+body {
+  min-height: 100vh;
+
+  @supports (-webkit-appearance:none) and (stroke-color: transparent) {
+    min-height: -webkit-fill-available;
+  }
+}
+
 ul, li, ol {
   list-style: none;
 }
