@@ -9,7 +9,11 @@ export const Pages = () => {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={<Home />}
+            basename={process.env.PUBLIC_URL}
+          />
           <Route path="/record" element={<Recode />} />
           <Route path="/code" element={<Code />} />
         </Routes>
