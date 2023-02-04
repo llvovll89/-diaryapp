@@ -6,12 +6,14 @@ import { RanderPage } from '../randerpage/RanderPage';
 export const Main = ({ active, updateNote , submitClick}) => {
   const [initFont, setInitFont] = useState(true);
   const onChangeEvent = (key, val) => {
+
     updateNote({
       ...active,
       [key]: val,
       modefied: Date.now(),
     });
   };
+
   const handelClick = () => {
     setInitFont(!initFont);
   };
