@@ -4,7 +4,9 @@ import { Main } from '../components/main/Main';
 import { Sidebar } from '../components/sidebar/Sidebar';
 
 export const Home = () => {
-  const [note, setNote] = useState(JSON.parse(localStorage.note) || []);
+  const [note, setNote] = useState(
+    localStorage.note ? JSON.parse(localStorage.note) : []
+  );
   const [active, setActive] = useState(false);
 
   const addNote = () => {
