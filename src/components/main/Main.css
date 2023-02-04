@@ -1,0 +1,104 @@
+.main-container {
+    width: 65vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.note_edit {
+    height: max-content;
+    padding: 1rem;
+}
+
+.note_preview {
+    height: 40vh;
+    padding: 1rem;
+    margin: 0.5rem 1rem;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+.note_preview .title {
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+}
+
+.note_preview .mark_down {
+    font-size: 1.2rem;
+    text-indent: 10px;
+}
+
+.note_edit textarea,
+.note_edit input {
+    display: block;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    width: 100%;
+    height: calc(50vh - 130px);
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.note_edit textarea {
+    font-size: 1.2rem;
+}
+
+.note_edit input {
+    height: 50px;
+    font-size: 1.5rem;
+}
+
+.font_change, .submit_btn {
+    width: 100%;
+    height: 50px;
+    border: 1px solid skyblue;
+    background: transparent;
+    color: #000;
+}
+
+.submit_btn {
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        display: block;
+    }
+
+    .note_edit {
+        padding: 0.6rem;
+    }
+
+    .note_edit textarea {
+        font-size: 1rem;
+    }
+
+    .note_preview {
+        padding: 0.6rem;
+        margin: 0 0.6rem;
+    }
+
+    .note_preview .title {
+        font-size: 1.25rem;
+        margin-bottom: 3px;
+    }
+
+    .note_edit textarea,
+    .note_edit input {
+        margin-bottom: 6px;
+    }
+
+    .note_edit input {
+        font-size: 1.1rem;
+    }
+
+    .note_edit input[type="file"] {
+        font-size: 0.9rem;
+    }
+
+    .font_change {
+        height: 45px;
+        font-size: 1rem;
+    }
+}
