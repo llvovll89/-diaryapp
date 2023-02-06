@@ -8,6 +8,7 @@ export const Home = () => {
     localStorage.note ? JSON.parse(localStorage.note) : []
   );
   const [active, setActive] = useState(false);
+  // const [wdSize, setWidSize] = useState(false);
 
   const addNote = () => {
     const today = new Date();
@@ -20,10 +21,11 @@ export const Home = () => {
     const newNote = {
       id: uuid(),
       title: '빈 노트',
-      text: 'MarkDown이 적용 됩니다.',
+      text: 'MarkDown이 적용 됩니다',
       modefied: `${year}-${month}-${day} | ${hour} : ${min}`,
     };
 
+    // setActive(!active);
     setNote([newNote, ...note]);
   };
 
@@ -69,6 +71,7 @@ export const Home = () => {
         active={getActive()}
         updateNote={updateNote}
         submitClick={submitClick}
+        note={note}
       />
       <Sidebar
         note={note}

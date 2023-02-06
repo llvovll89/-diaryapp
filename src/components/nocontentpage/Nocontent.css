@@ -1,0 +1,125 @@
+.note_container {
+    width: 65vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background: #231F20;
+    overflow: hidden;
+}
+
+.note_box {
+    width: 100%;
+    font-family: var(--korFont);
+    margin: 1rem;
+    padding: 0 1rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 1rem;
+    overflow-y: auto;
+    height: max-content;
+}
+
+.note_box::-webkit-scrollbar {
+    width: 1.5rem;
+}
+
+.note_box::-webkit-scrollbar-thumb {
+    background-color: #3772f0;
+    border: 6px solid transparent;
+    background-clip: padding-box;
+    border-radius: 100vw;
+}
+
+.note_box::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.note_contents {
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    margin-bottom: 12px;
+    background: #fff;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ccc;
+}
+
+.note_title {
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    width: 100%;
+    background: #3772f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem;
+}
+
+.note_title span {
+    display: inline-block;
+    font-size: 1.35rem;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    margin: 0.35rem;
+    color: #F3efe3;
+}
+
+.note_item {
+    padding: 0.3rem;
+    margin: 0.5rem 0;
+}
+
+.note_item p {
+    text-indent: 6px;
+    line-height: 1.25;
+    font-size: 1.1rem;
+    padding: 0 6px;
+    word-break: break-all;
+}
+
+.note_modefied {
+    padding: 0 12px;
+}
+
+.note_modefied p {
+    font-size: 1rem;
+    color: #F3efe3;
+}
+
+@media screen and (max-width: 1024px) {
+    .note_box {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 500px) {
+    .note_box {
+        margin: 0.75rem;
+    }
+    .note_contents {
+        margin-bottom: 6px;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+    .note_title {
+        padding: 0.1rem;
+    }
+    .note_title span {
+        font-size: 1.15rem;
+    }
+    .note_modefied {
+        padding: 0 6px;
+    }
+    .note_modefied p {
+        font-size: 0.85rem;
+    }
+    .note_item {
+        margin: 0.35rem 0;
+    }
+    .note_item p {
+        font-size: 0.95rem;
+        padding: 0 4px;
+    }
+}

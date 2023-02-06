@@ -2,11 +2,11 @@ import React from 'react';
 import './Sidebar.css';
 
 export const Sidebar = ({ note, addNote, delNote, active, setActive }) => {
-    const sortNote = note.sort((a, b) => b.modefied - a.modefied)
+  const sortNote = note.sort((a, b) => b.modefied - a.modefied);
 
   return (
     <>
-      <div className='sidebar-container'>
+      <div className="sidebar-container">
         <div className="sidebar-header">
           <h1 className="title">Diary 🍚</h1>
           <button className="add_btn" onClick={addNote}>
@@ -16,15 +16,22 @@ export const Sidebar = ({ note, addNote, delNote, active, setActive }) => {
         <div className="sidebar-body">
           {sortNote.map((item) => (
             <div
-              className={`sidebar-list ${item.id === active ? 'active' : "" }`}
+              className={`sidebar-list ${item.id === active ? 'active' : ''}`}
               key={item.id}
-              onClick={() => setActive(item.id)}
             >
               <div className="sidebar-item-title">
                 <span className="item_title">제목 : {item.title}</span>
-                <button className="del_btn" onClick={() => delNote(item.id)}>
-                  삭제하기
+                <div className="btnbox">
+                <button
+                  className="up_btn"
+                  onClick={() => setActive(item.id)}
+                >
+                  수정하기
                 </button>
+                  <button className="del_btn" onClick={() => delNote(item.id)}>
+                    삭제하기
+                  </button>
+                </div>
               </div>
 
               <p>{item.text && item.text.substr(0, 80) + '...'}</p>
