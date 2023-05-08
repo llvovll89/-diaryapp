@@ -42,16 +42,11 @@
 .sidebar-list.active {
     background: #212221;
     transition: 0.3s all ease;
-    border: 2px solid #3772F0;
 }
 
 .sidebar-list.active .sidebar-item-title ,
 .sidebar-list.active p {
     color: #FFFF;
-}
-
-.sidebar-list.active .btnbox button {
-    border: 1px solid #FFF;
 }
 
 .sidebar-list:hover {
@@ -64,7 +59,7 @@
 }
 
 .sidebar-item-title {
-    font-size: 1.25rem;
+    font-size: clamp(18px, 2.5vw, 20px);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -92,11 +87,12 @@
 
 .sidebar-list p{
     margin: 10px 0;
+    font-size: clamp(14px, 2vw, 16px);
     letter-spacing: 0.5px;
 }
 
 .fixed-data {
-    font-size: 0.9rem;
+    font-size: clamp(13.5px, 1.8vw, 14px);
     color: #999;
 }
 
@@ -120,8 +116,6 @@
     font-weight: 600;
     font-family: var(--korFont);
 }
-
-/* toggle */
 .toggle {
     position: fixed;
     display: none;
@@ -129,17 +123,14 @@
     right: 12px;
 }
 
-.toggle svg {
-    width: 26px;
-    height: 26px;
-    cursor: pointer;
-}
-
+/* toggle */
 @media screen and (max-width: 768px) {
 
     .sidebar-header {
         padding: 8px;
-        justify-content: flex-start;
+        flex-direction: column;
+        gap: 6px;
+        /* justify-content: flex-start; */
     }
 
     .sidebar-header .add_btn {
@@ -161,19 +152,26 @@
     }
 
     .sidebar-item-title .item_title {
-        margin: 2px auto;
+        margin: 4px auto;
     }
 
     .sidebar-list p {
-        font-size: 0.8rem;
         margin: 6px 0;
+        padding-left: 3px;
     }
 
     .fixed-data {
-        font-size: 0.8rem;
+        padding-left: 3px;
     }
 
-    .toggle {
-        display: block;
+    .btnbox {
+        flex-direction: column;
+        width: 100%;
     }
+
+    .btnbox button {
+        width: 100%;
+        padding: 6px 12px;
+    }
+    
 }

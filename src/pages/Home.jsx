@@ -12,8 +12,6 @@ export const Home = () => {
   const addNote = () => {
     const today = new Date();
     const year = today.getFullYear();
-    const hour = today.getHours();
-    const min = today.getMinutes();
     const month = ('0' + (today.getMonth() + 1)).slice(-2);
     const day = ('0' + today.getDate()).slice(-2);
 
@@ -21,7 +19,7 @@ export const Home = () => {
       id: uuid(),
       title: '빈 노트',
       text: 'MarkDown이 적용 됩니다',
-      modefied: `${year}-${month}-${day} | ${hour} : ${min}`,
+      modefied: `${year}-${month}-${day}`  ,
     };
 
     // setActive(!active);

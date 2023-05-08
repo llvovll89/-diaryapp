@@ -31,7 +31,6 @@ export const Sidebar = ({ note, addNote, delNote, active, setActive }) => {
             <div
               className={`sidebar-list ${item.id === active ? 'active' : ''}`}
               key={item.id}
-              onClick={() => toggleHandler(item)}
             >
               <div className="sidebar-item-title">
                 <span className="item_title">제목 : {item.title}</span>
