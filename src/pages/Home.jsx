@@ -8,7 +8,6 @@ export const Home = () => {
     localStorage.note ? JSON.parse(localStorage.note) : []
   );
   const [active, setActive] = useState(false);
-  // const [wdSize, setWidSize] = useState(false);
 
   const addNote = () => {
     const today = new Date();
@@ -72,6 +71,7 @@ export const Home = () => {
         updateNote={updateNote}
         submitClick={submitClick}
         note={note}
+        onClick={getActive()}
       />
       <Sidebar
         note={note}

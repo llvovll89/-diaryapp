@@ -51,100 +51,21 @@ html {
 
 body {
   min-height: 100vh;
-  /* mobile viewport bug fix */
   min-height: -webkit-fill-available;
 }
 
-/* html, body {
-  min-height: 100vh;
-
-  @supports (-webkit-appearance:none) and (stroke-color: transparent) {
-    min-height: -webkit-fill-available;
-  }
-} */
-
 .wrap {
+  position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
-  font-family: var(--mainFont);
+  font-family: var(--korFont);
   display: flex;
 }
-
-
 
 button {
   color: #FFF;
   border-radius: 6px;
 }
 
-.add_btn {
-  width: 25%;
-  background: rgb(106, 193, 106);
-}
-
-.randerpage {
-  width: 65vw;
-  height: 100vh;
-  padding: 10rem;
-  justify-content: center;
-  background: #191919;
-}
-
-.content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  background: #121212;
-  border-radius: 20px;
-}
-
-.content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20%;
-  height: 36px;
-  background: #FFF;
-}
-
-.content .ani_text {
-  padding: 1rem;
-  font-size: 2rem;
-  color: #FFFFFF;
-  background: rgba(0, 0, 0, 0.12);
-  border-radius: 12px;
-}
-
-.content .ani_text:nth-child(1) {
-  margin-bottom: 12px;
-}
-
-.content .styles-module_blinkingCursor__yugAC {
-  color: #FFFFFF;
-}
-
-@media screen and (max-width: 768px) {
-  .randerpage {
-    padding: 1rem;
-  }
-
-  .content {
-    padding: 0 1rem;
-  }
-
-  .content .ani_text {
-    letter-spacing: 1px;
-    padding: 0.75rem;
-    font-size: 1.35rem;
-    color: #FFFFFF;
-    font-family: var(--korFont);
-    word-break: break-all;
-  }
-}
 

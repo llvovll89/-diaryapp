@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import './Main.css';
 import ReactMarkDown from 'react-markdown';
 import { Nocontent } from '../nocontentpage/Nocontent';
+import './Main.css';
 
-export const Main = ({ active, updateNote, submitClick , note }) => {
+export const Main = ({ active, updateNote, submitClick, note , onClick}) => {
   const [initFont, setInitFont] = useState(true);
+
   const onChangeEvent = (key, val) => {
     const today = new Date();
     const year = today.getFullYear();
-    const hour = today.getHours();
-    const min = today.getMinutes();
+    const hour = String(today.getHours()).padStart(2, 0);
+    const min = String(today.getMinutes()).padStart(2, 0);
     const month = ('0' + (today.getMonth() + 1)).slice(-2);
     const day = ('0' + today.getDate()).slice(-2);
 
@@ -24,8 +25,12 @@ export const Main = ({ active, updateNote, submitClick , note }) => {
     setInitFont(!initFont);
   };
 
-  // if (!active) return <RanderPage />;
-  if(!active) return <Nocontent note={note} active={active} initFont={initFont}/>
+  const clickHandler = () => {
+
+  }
+
+  if (!active)
+    return <Nocontent note={note} active={active} initFont={initFont} onClick={onClick} />;
 
   return (
     <>
