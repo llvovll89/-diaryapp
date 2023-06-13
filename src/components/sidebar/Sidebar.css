@@ -1,7 +1,7 @@
 .sidebar-container {
     position: relative;
     width: 40vw;
-    height: 100vh;
+    min-height: 100vh;
     border-left: 1px solid #eee;
 }
 
@@ -15,7 +15,7 @@
     display: flex;
     gap: 9px;
     align-items: center;
-    font-size: clamp(16.5px , 2.5vw, 22px);
+    font-size: clamp(15px , 2.5vw, 20px);
 }
 
 .sidebar-header .add_btn {
@@ -25,13 +25,13 @@
 }
 
 .sidebar-body {
-    padding: 0 1%;
+    padding: 6px 12px;
     height: calc(100vh - 78px);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .sidebar-list {
-    padding: 1.1rem;
+    padding: 12px;
     background: rgb(246, 245, 245);
     cursor: pointer;
     border-radius: 12px;
@@ -86,14 +86,25 @@
 }
 
 .sidebar-list p{
-    margin: 10px 0;
-    font-size: clamp(14px, 2vw, 16px);
+    font-size: clamp(12px, 1.5vw, 16px);
     letter-spacing: 0.5px;
 }
 
 .fixed-data {
     font-size: clamp(13.5px, 1.8vw, 14px);
     color: #999;
+}
+
+.contents {
+    padding: 12px 0px 6px 0px;
+}
+
+.contents h1 {
+    font-size: clamp(16px, 1.5vw, 26px);
+}
+
+.contents code {
+    font-size: clamp(13.5px, 1.5vw, 16px);
 }
 
 /* 비었을때 empty */

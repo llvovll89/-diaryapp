@@ -11,8 +11,7 @@
 .note_box {
     width: 100%;
     font-family: var(--korFont);
-    margin: 1rem;
-    padding: 0 1rem;
+    padding: 1rem;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2 , 1fr);
@@ -43,6 +42,7 @@
     background: #fff;
     padding-bottom: 6px;
     border-bottom: 1px solid #ccc;
+    min-height: 150px;
 }
 
 .note_title {
@@ -66,8 +66,8 @@
 }
 
 .note_item {
-    padding: 0.3rem;
-    margin: 0.5rem 0;
+    padding: 12px;
+    /* margin: ; */
 }
 
 .note_item p {
@@ -95,9 +95,9 @@
 
 /* mobile */
 @media screen and (max-width: 500px) {
-    .note_box {
-        margin: 0.75rem;
-    }
+    /* .note_box {
+       
+    } */
     .note_contents {
         margin-bottom: 6px;
         padding-bottom: 0;

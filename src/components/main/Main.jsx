@@ -90,7 +90,7 @@ export const Main = ({ active, updateNote, submitClick, note , onClick}) => {
           <ReactMarkDown
             className="mark_downs"
             style={{
-              fontFamily: initFont
+              fontFamily: initFont  
                 ? "'Rajdhani', sans-serif"
                 : 'Chosunilbo_myungjo',
             }}

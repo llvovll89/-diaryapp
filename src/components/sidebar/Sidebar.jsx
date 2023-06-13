@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { TfiWrite } from 'react-icons/tfi';
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import './Sidebar.css';
 
 export const Sidebar = ({ note, addNote, delNote, active, setActive }) => {
@@ -47,11 +48,13 @@ export const Sidebar = ({ note, addNote, delNote, active, setActive }) => {
                 </div>
               </div>
 
-              <p>
-                {item.text.length > 150
-                  ? item.text?.substr(0, 120) + '...'
-                  : item.text}
-              </p>
+              <div className="contents">
+                <ReactMarkdown>
+                  {item.text.length > 150
+                    ? item.text?.substr(0, 120) + '...'
+                    : item.text}
+                </ReactMarkdown>
+              </div>
               <div className="fixed-data">마지막 수정 {item.modefied}</div>
             </div>
           ))}

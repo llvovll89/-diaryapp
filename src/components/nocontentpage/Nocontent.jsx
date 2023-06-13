@@ -1,5 +1,6 @@
 import React from 'react';
 import uuid from 'react-uuid';
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import './Nocontent.css';
 
 export const Nocontent = ({ note, onClick }) => {
@@ -17,11 +18,11 @@ export const Nocontent = ({ note, onClick }) => {
                 </div>
               </div>
               <div className="note_item">
-                <p>
+                <ReactMarkdown>
                   {item.text.length > 60
                     ? item.text.substr(0, 300) + '...'
                     : item.text}
-                </p>
+                </ReactMarkdown>
               </div>
             </div>
           ))}
